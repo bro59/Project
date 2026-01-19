@@ -1,0 +1,175 @@
+.pattern-box {
+  padding: 2rem;
+  max-width: 500px;
+  margin: 40px auto;
+  /*background: black;*/
+  position: relative;
+  height: 400px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  text-align: left;
+  font-size: 18px;
+  color: rgba(173, 216, 230, 1) ;
+  font-weight: bold;
+}
+
+.overBox {
+    padding: 2rem;
+  max-width: 500px;
+  margin: 40px auto;
+  /*background: black;*/
+  position: relative;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  text-align: left;
+  font-size: 18px;
+  color: rgba(173, 216, 230, 1) ;
+  font-weight: bold;
+}
+
+.overBox::before {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  
+  background-size: cover;
+  background-position: center;
+  filter: hue-rotate(9px);
+  background-repeat: no-repeat;
+  border-radius: 16px;
+  z-index: -1;  
+
+}
+
+.form-container {
+    background: lightblue;
+    padding: 30px;
+    width: 380px;
+    border-radius: 20px;
+    color: darkblue;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+    margin: 50px auto;
+}
+
+
+
+.pattern-box::before {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  /*background-image: url("pictures/Robert Lewandowski.jpg");*/
+  background: repeating-linear-gradient(
+    45deg,
+    #004d98,
+    #004d98 10px,
+    #a50044 10px,
+    #a50044 20px
+  );
+  background-size: cover;
+  background-position: center;
+  filter: hue-rotate(9px);
+  background-repeat: no-repeat;
+  border-radius: 16px;
+  z-index: -1;
+  border-radius: 15px;
+  box-shadow: #004d98 0px 4px 8px;
+}
+h3 a {
+  text-decoration: wavy underline;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.5rem;
+}
+
+.output {
+ /* font-size: 24px;*/
+  font-weight: bold;
+  color: lightgreen;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.output2 {
+ /* font-size: 24px;*/
+  font-weight: bold;
+  color: lightgreen;
+  cursor: pointer;
+  transition: opacity 0.5s ease-in-out;
+}
+
+
+.output:hover{
+  opacity: 1; 
+  cursor: pointer;
+
+}
+
+.header {
+  width: 100%;
+  text-align: center;
+  padding-top: 20px;
+  opacity: 0.9;
+  background: repeating-linear-gradient(
+    45deg,
+    #004d98,
+    #004d98 10px,
+    #a50044 10px,
+    #a50044 20px
+  );
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+  box-shadow: #004d98 0px 4px 8px;
+}
+
+.comment-box {
+  padding: 1rem;
+  max-width: 600px;
+  margin: 20px auto;
+  background: rgba(255, 255, 255, 0.1);
+  position: relative;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  text-align: left;
+  font-size: 16px;
+  color: rgba(173, 216, 230, 1) ;
+  font-weight: bold;
+}
+.startClass{
+  border-radius: 15px;
+  box-shadow: #004d98 0px 4px 8px;
+  border:1px solid black; 
+  padding:10px;
+  width:300px;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  font-family:Arial, sans-serif;
+  background-color:black;
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+  font-size:16px; color:#333; font-weight:bold;
+  color:rgba(173, 216, 230, 1);
+
+
+}
+.header h1 {
+  font-size: 2.5rem;
+  color: rgba(173, 216, 230, 1);
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  size: 25cm;
+  border-radius: 15px;
+  box-shadow: #004d98 0px 4px 8px;
+
+}

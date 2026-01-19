@@ -1,0 +1,46 @@
+<html lang="en">
+    <head>
+         <meta charset="UTF-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title> Credential form </title>
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+<body>
+
+    <div class="form-container">
+
+<form method="post" action="handlelogin.php" >
+
+    
+    
+          <fieldset> <!--  
+ Seperate files  with identical interfaces-->
+      <legend>Registration</legend>
+
+  <p><label for="username">Username: </label> 
+  <input type="text" id="username" name="username"> </p><br>
+
+    <p><label for="password">Password: </label> <!--small text area with length limit -->
+        
+	<input type="password" name="password" id = "password" size="20" maxlength="40" ></p>
+
+    </fieldset> 
+
+
+  <input type="submit" name="submit" value="Login" > 
+
+</form><br><br>
+
+    <form method="post" action="register.html" >
+
+      <input type="submit" name="submit" value="Register"> 
+    
+
+</form>
+
+
+    </div>
+
+</body>
+</html>

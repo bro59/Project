@@ -1,0 +1,33 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+         <title> PHP Cookie Demo</title>
+    </head>
+<body>
+   <!-- <a href=template.php?pet=dog>Door Number One</a> 
+    <br> 
+    <a href=template.php?pet=cat>Door Number Two</a>
+    <br> 
+    <a href=template.php?pet=mouse>Door Number Three</a> -->
+
+    <?php
+    $var = "dolphin";
+    $url="href=template.php?pet=$var";
+    ?>
+    <a <?php echo $url; ?> >Door Number One</a>
+
+
+
+
+
+
+
+
+</body>
+
+
+</html>
+

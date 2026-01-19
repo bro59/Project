@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+         <title> Dynamic Navigation Tutorial </title>
+          <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+<body style ="background-color:rgba(9, 34, 50, 1); color:rgba(173, 216, 230, 1);">
+
+    
+     <div class="form-container" style = "color: darkblue; text-align: center;">
+
+    <h1> Delete Player </h1>
+
+</div>
+    <h3> Current Players:</h3>
+
+
+
+
+    
+  <div>
+   
+   
+    <?php
+    // Connect and select the "test" database
+    $mysqli = new mysqli("localhost", "root", "", "projectsoccer");
+    if ($mysqli->connect_errno) {
+        die("Connection Failed: ($mysqli->connect_errno) $mysqli->connect_error");
+       
+    }else {
+        echo "<br><br>";
+    }
+    ?>
+
+
+    <?php
+    $query = "SELECT playerName FROM player";
+
+
+    $result = $mysqli->query($query);
+
+    if ($result->num_rows > 0) {
+        // output data of each row
+        // fetch_row() puts results into an array that starts at 0
+        //fetch_assoc() puts results into an associative array. Column names are the keys.
+        // Here we use fetch_row(), but we might want to use fetch_assoc() later.
+
+
+        while($row = $result->fetch_row()) {
+          $player23 = $row[0];
+          echo $player23;
+         
+          echo "<br><br>";
+         
+          }
+    } else {
+        echo "0 results";
+    }
+
+
+    $mysqli->close();
+    ?>
+
+
+    <br>
+    <br>
+
+
+        </div>
+
+
+    <br><br><br>
+
+    <div class="form-container" style = "color: darkblue; text-align: center;"> Please Copy the name of the player you want to delete. Then paste it into the form below.
+        
+
+</div>
+
+
+
+
+    <div class="form-container">
+        <form method="post" action="delete.php" style="height: 200px;">   
+            <fieldset> <!--  
+The <fieldset> </fieldset> (making div bigger) tag draws a box around related fields.-->
+      
+            <legend style="color:black;">Player Selection</legend>
+
+      
+    <p><label for="playername">Player Name: </label> <!--small text area with
+      length limit -->
+	<input type="text" name="playername" id = "playername" size="20" maxlength="40" ></p>
+
+  
+    </fieldset>
+
+  <input type="submit" name="submit" value="Delete Player"> 
+
+</form>
+
+
+    </div>
+    
+
+
+
+
+
+    
+    
+
+
+
+
+
+
+
+
+</body>
+
+
+</html>
+
